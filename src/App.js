@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App = (bitch) => {
+const App = () => {
     return (  
         <div>
             <h2>Hello</h2>
