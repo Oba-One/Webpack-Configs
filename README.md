@@ -1,10 +1,36 @@
 # Webpack-Configs
-
 Webpack configuration with loaders, plugins, and extensions
 
-## Libraries
+## Common Configuration
+Common plugins. loaders, and tools for all builds
 
-List of libraries included in config broken down in categories
+### Loaders
+
+* Babel -
+* ESLint -
+* Source Map -
+
+### Plugins
+
+### Tools
+
+## Development Configuration
+Development build setup
+
+### Loaders
+
+### Plugins
+
+### Tools
+
+## Production Configuration
+Production build configuration
+
+### Loaders
+
+### Plugins
+
+### Tools
 
 ### Loaders
 
