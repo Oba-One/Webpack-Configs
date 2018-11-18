@@ -1,13 +1,15 @@
-import path from 'fs'
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
-    entry: './src/index',
-    output: {
-        path: `${_dirname}/public`
-    },
+    devtool : 'cheap-module-source-map',
     module: {
-        loaders: [
+        rules: [
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
           ]    
     },
-    devtool : 'source-map'
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'index.html'
+        })    
+    ]
 }

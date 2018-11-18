@@ -4,9 +4,11 @@
   "description": "Webpack configuration with loaders, plugins, and extensions",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js --progress --hide-modules",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "1": "webpack-dev-server --config webpack.dev.js",
+    "2": "webpack --config webpack.prod.js --progress --hide-modules",
+    "start": "webpack-dev-server --open --port 4000 --compress --mode development",
+    "dev": "webpack --mode development --progress",
+    "build": "webpack --mode production --progress "
   },
   "dependencies": {
     "react": "^16.6.3",
@@ -14,20 +16,25 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-async-generator-functions": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
+    "babel-plugin-styled-components": "^1.8.0",
+    "html-webpack-plugin": "^4.0.0-beta.4",
     "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   },
   "babel": {
     "presets": [
-      "react",
-      "@babel/preset-env",
-      "stage-2"
+      "@babel/react",
+      "@babel/env"
     ],
     "plugins": [
-      "babel-plugin-styled-components"
+      "babel-plugin-styled-components",
+      "@babel/plugin-proposal-class-properties"
     ]
   },
   "browserslist": {
